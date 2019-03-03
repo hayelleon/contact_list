@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  
+
   root            to: 'static_pages#index'
   get 'sobre',    to: 'static_pages#sobre'
   get 'contato',  to: 'static_pages#contato'
@@ -14,4 +13,5 @@ Rails.application.routes.draw do
     resources :contacts, only: [:index, :new, :create, :edit, :update, :destroy]
   end
   resources :sessions, only: [:new, :create, :destroy]
+
 end
